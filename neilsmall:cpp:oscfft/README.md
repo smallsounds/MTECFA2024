@@ -477,7 +477,6 @@ Okay, I cleaned up my code, and here's what I have now:
         for (int i = 0; i < bands; i+=16) {
         ofPolyline polyline;
         for (int j = 0; j < bands; j++) {
-        ofPushMatrix();
         polyline.addVertex(j + centerX - (bands / 2), centerY - (i - fft[j] * 100.0));
     }
     polyline.draw();
@@ -580,3 +579,35 @@ I was chatting with Cooper while writing the documentation for today and when I 
     although it can prob still just use one for loop to assign both of them tho"
 
 I will explore this tomorrow if I have the time :)
+
+# Day 5
+Hello, I have had a migraine all day,  so I haven't been able to touch this project due to its migraine-inducing visuals and audio. HOWEVER, what I can do in the final 20 hours, is consult Cooper. There is something missing from this project, and I don't know what. I sent Cooper a video recording of my project, and they said:
+
+    i think the actual connectivity between the audio and the visuals ur doing is very cool, but i wish the visuals were a bit more cohesive, i like each piece of it individually, but what if they worked together to form a singular visual stucture, y'know?
+
+So I decided to add a picture of Cubase with all of the audio files for this project inside of it. I added "ofImage cube;" to the header file and wrote "cube.draw(ofGetWidth()/2, ofGetHeight()/2);"
+
+I ran the project and didn't like how bright the image was. I looked up how to change the transparency of images and found [this](https://procomputingproducts.co.uk/post/set-transparency-of-an-image-on-open-frameworks). I didn't realize you could apply ofSetColor to an image. I darkened the image and also changed the alpha value. This messed up my OSC graphics, so I added another ofSetColor below and rearranged the other ofSetColor.
+
+    //cubase
+    ofSetColor(175, 175, 175, 25);
+    cube.draw(ofGetWidth()/2, ofGetHeight()/2);
+    //osc ball and accompanying human thng
+    ofSetColor(255, 255, 255, 255);
+    int maxRadius = 100;
+    int radiusStepSize = 3;
+    int maxOffsetDistance = 125;
+    for (int radius=maxRadius; radius>0; radius-=radiusStepSize) {
+            float angle = ofRandom(ofDegToRad(360.0));
+            float distance = ofRandom(maxOffsetDistance);
+            float xOffset = cos(angle) * distance;
+            float yOffset = sin(angle) * distance;
+            ofDrawCircle(oscx+400, oscy+200, radius);
+            ofDrawCircle(distance, distance, 30);
+            ofSetColor(oscy, oscx, 150, 255);
+            ofDrawRectangle(distance, distance+40, 50, 100);
+            ofDrawCircle(distance*100, -distance*100, 30);
+            ofDrawRectangle(distance*100, distance*100+40, 50, 100);
+    }
+
+I then cleaned and reformatted the source file and called it a day. My brain is pounding.
