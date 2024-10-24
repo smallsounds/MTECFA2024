@@ -615,3 +615,5 @@ I then cleaned and reformatted the source file and called it a day. My brain is 
 # Day 6
 I had my high school friends review the project, and a lot of my intentions were clear. I realized that I haven't really been documenting the intention behind the art, so I'm going to do that now.
 
+![image](https://github.com/smallsounds/MTECFA2024/blob/main/neilsmall%3Acpp%3Aoscfft/READMEpic/vo.png)
+
