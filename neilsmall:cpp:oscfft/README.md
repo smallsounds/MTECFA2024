@@ -585,7 +585,7 @@ Hello, I have had a migraine all day,  so I haven't been able to touch this proj
 
     i think the actual connectivity between the audio and the visuals ur doing is very cool, but i wish the visuals were a bit more cohesive, i like each piece of it individually, but what if they worked together to form a singular visual stucture, y'know?
 
-So I decided to add a picture of Cubase with all of the audio files for this project inside of it. I added "ofImage cube;" to the header file and wrote "cube.draw(ofGetWidth()/2, ofGetHeight()/2);"
+So I decided to add a picture of Cubase with all of the audio files for this project inside of it. I added "ofImage cube;" to the header file and wrote "cube.draw(ofGetWidth()/2, ofGetHeight()/2);" I didn't use the example's arguments for the draw function because I liked where the image was placed in relation to the other elements on the canvas when it is centered. 
 
 I ran the project and didn't like how bright the image was. I looked up how to change the transparency of images and found [this](https://procomputingproducts.co.uk/post/set-transparency-of-an-image-on-open-frameworks). I didn't realize you could apply ofSetColor to an image. I darkened the image and also changed the alpha value. This messed up my OSC graphics, so I added another ofSetColor below and rearranged the other ofSetColor.
 
@@ -617,3 +617,4 @@ I had my high school friends review the project, and a lot of my intentions were
 
 ![image](https://github.com/smallsounds/MTECFA2024/blob/main/neilsmall%3Acpp%3Aoscfft/READMEpic/vo.png)
 
+The image of Cubase in the background shows how all the elements are about voice over editing. The "people" flashing on the side show that these voices you're hearing are characters and that the experience is so overwhelming that you can't focus on them. The OSC circle emphasizes the background static/talking/jitter and also evokes a calm feeling for me. I say calm because it reminds me of a sun that a 5 year old would draw. The background static/talking itself could be noise inside the recordings or from my roommates' activities, as both happen while I'm trying to edit VO files. The rectangles in the background represent the stability of the DAW and its settings--it's the only constant that makes sense. The polylines lay right on top of the DAW tracks in the Cubase image and they're upside down, making the tracks in the image come to life. The icospheres in the center represent what I'm listening for while editing VO files. Finally, pressing "p" to make the metronome play and "m" to make it mute represents how I get session files where the metronome is on (or off). I have to mute it, or I accidentally turn it on.
