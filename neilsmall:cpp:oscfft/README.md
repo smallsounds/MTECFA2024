@@ -394,7 +394,7 @@ source file:
     }
 
 
-I then added the lines that allow the project to receive OSC messages. I imported the code from the OSC example and my exploration of it (see above) into the project. The graphics coincidentally fit well with my project's theme, so I think I'm going to keep them as is. I also decided to make the metronome play when I press "p" rather than having it play from the start and make it stop when I press "m." I tried mapping the audio to spacebar initially, but there's apparently [no spacebar option](https://openframeworks.cc/documentation/application/ofBaseApp/#!show_keyPressed). I used my C# knowledge to set up the play and stop functions for the metronome audio file, and they worked! Additionally, I added a polyline to reflect the FFT. I found that 512 bands yielded the best visuals for my project.
+I then added the lines that allow the project to receive OSC messages. I imported the code from the OSC example and my exploration of it (see above) into the project. The graphics coincidentally fit well with my project's theme, so I think I'm going to keep them as is. I also decided to make the metronome play when I press "p" rather than having it play from the start and make it stop when I press "m." I tried mapping the audio to spacebar initially, but there's apparently [no spacebar option](https://openframeworks.cc/documentation/application/ofBaseApp/#!show_keyPressed). I used my C# knowledge to set up the play and stop functions for the metronome audio file, and they worked! Additionally, I added a polyline to reflect the FFT. I played around with the number of bands and found that 512 bands yielded the best visuals for my project. I tried a 10000 bands and that crashed the project haha. I attempted to find a way to make the polyline take over the whole screen, but I wasn't sure how to do that without increasing the number of bands/crashing the project.
 
 
 Okay, I cleaned up my code, and here's what I have now:
@@ -611,3 +611,7 @@ I ran the project and didn't like how bright the image was. I looked up how to c
     }
 
 I then cleaned and reformatted the source file and called it a day. My brain is pounding.
+
+# Day 6
+I had my high school friends review the project, and a lot of my intentions were clear. I realized that I haven't really been documenting the intention behind the art, so I'm going to do that now.
+
