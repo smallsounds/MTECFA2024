@@ -29,7 +29,7 @@ I analyzed the first 15 lines of code:
 
         // calculates the direction of the note based on where the note is. If the current note is under 58, the direction remains the same. If the note is over 73, the direction reverses. Neither of the these conditions are met, the direction is random.
         var calcDir = {|val, curNote|
-            case
+            case 
             { curNote < 58 } { val }
             { curNote > 73 } { val * -1 }
             { true } { [val, val.neg].choose}
