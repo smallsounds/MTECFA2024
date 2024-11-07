@@ -37,9 +37,7 @@ Pdef(\basePb,
 		\assignRoot, Pfunc{|ev|root = ev.root},
 		\dur, Pseq([dur + swing, dur - swing], inf),
 		\scale, Pfunc{|ev|
-			//ev.root adjusts the notes according to the current root note
 			var tmpScale = (allScaleDegrees + ev.root);
-			//
 			var temp = tmpScale[tmpScale.indexInBetween(48).asInteger..tmpScale.indexInBetween(83).asInteger];
 			scale = temp;
 		},
@@ -105,4 +103,5 @@ Pdef(\bass,
 ).play
 );
 
+// removes all the bepop machine Pdefs
 Pdef.removeAll;
