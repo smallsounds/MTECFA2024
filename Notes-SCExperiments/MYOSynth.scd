@@ -25,4 +25,6 @@ x.set(\freq,60.midicps);
 x.set(\freq,64.midicps);
 )
 
+x.free;
+
 // Sep.26 notes: inf = infinity, pbind takes negative integers for scale degrees = wider range of pitches
